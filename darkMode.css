@@ -1,0 +1,399 @@
+/* Font Declarations */
+@font-face {
+    font-family: 'Poppins-Black';
+    src: url('fonts/Poppins/Poppins-Black.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Roboto-Condensed-Bold';
+    src: url('fonts/Roboto/Roboto_Condensed-Bold.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Roboto-Regular';
+    src: url('fonts/Roboto/Roboto-Regular.ttf') format('truetype');
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: 'CustomFont', Arial, sans-serif;
+    background-color: #242424;
+    color: #ffffff;
+}
+
+.container {
+    width: 100%;
+    min-height: 100vh;
+    margin: 0 auto;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Navbar Styles */
+.navbar {
+    width: 100%;
+    height: 100px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 0 35px;
+    background-color: #000000 !important;
+    position: relative;
+    gap: 20px;
+    border-radius: 11px;
+    backdrop-filter: blur(4px);
+}
+
+.logo-section {
+    display: flex;
+    align-items: center;
+    margin-left: -5px;
+}
+
+.logo {
+    width: 80px;
+    height: 88px;
+    transition: all 0.3s ease;
+}
+
+.brain-emoji {
+    display: none;
+    font-size: 24px;
+    position: absolute;
+    top: -25px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.nav-indicator {
+    display: none;
+    width: 100%;
+    height: 3px;
+    background-color: white;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    transition: all 0.3s ease;
+}
+
+.nav-links {
+    display: flex;
+    gap: 20px;
+    position: relative;
+    margin-left: 10px;
+}
+
+.nav-links a {
+    color: #ffffff !important;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 300;
+    position: relative;
+    padding: 10px 0;
+    font-family: 'Poppins-Black', sans-serif;
+    letter-spacing: 1.5px;
+}
+
+.nav-links a:hover .nav-indicator {
+    display: block;
+}
+
+.nav-links a.active .brain-emoji {
+    display: block;
+}
+
+.nav-right {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin-left: auto;
+}
+
+.country-selector {
+    color: rgba(255, 255, 255, 0.78) !important;
+    font-size: 14px;
+    font-family: 'Poppins-Black', sans-serif;
+    font-weight: 300;
+    letter-spacing: 1px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    cursor: pointer;
+}
+
+.country-selector i {
+    font-size: 14px;
+    opacity: 0.8;
+}
+
+.join-btn {
+    background-color: #ffffff !important;
+    color: #000000 !important;
+    border: 2.2px solid #000000 !important;
+    padding: 12px 18px;
+    font-size: 18px;
+    font-weight: 300;
+    letter-spacing: 1.1px;
+    cursor: pointer;
+    font-family: 'Roboto-Condensed-Bold', sans-serif;
+    backdrop-filter: blur(4px);
+}
+
+.cart-icon {
+    color: #ffffff !important;
+    font-size: 20px;
+}
+
+/* Search Bar Styles */
+.search-bar {
+    width: 100%;
+    height: 56px;
+    background-color: #000000 !important;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    border-radius: 0;
+    border-top: 2px solid white;
+}
+
+.kt8-logo {
+    display: flex;
+    align-items: center;
+}
+
+.kt8-logo img {
+    height: 55px;
+    width: auto;
+}
+
+.search-container {
+    flex: 0 1 550px;
+    margin-left: 25px;
+}
+
+.search-container input {
+    width: 100%;
+    height: 36px;
+    background-color: #ffffff !important;
+    border: 2px solid #454545 !important;
+    padding: 0 15px;
+    font-size: 16px;
+    color: #000000 !important;
+}
+
+.social-media {
+    display: flex;
+        align-items: center;
+        gap: 10px;
+        color: #FFFFFF;
+        margin-left: auto;
+        padding-left: 20px;
+        font-family: 'Roboto-Condensed-Bold', sans-serif;
+}
+
+.social-icons {
+    display: flex;
+        gap: 20px;
+        font-size: 18px;
+}
+
+/* Info Section Styles */
+.info-section {
+    width: 100%;
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 10px;
+    position: relative;
+    background-color: #242424;
+}
+
+.info-section h2 {
+    font-size: 20px;
+    color: #ffffff !important;
+    margin-top: 10px;
+    margin-left: 50px;
+    font-family: 'Roboto-Condensed-Bold', sans-serif;
+    letter-spacing: 1.2px;
+    font-weight: 300;
+}
+
+.info-links {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-left: 50px;
+    margin-top: 8px;
+}
+
+.info-links a {
+    color: rgba(255, 255, 255, 0.78) !important;
+    text-decoration: none;
+    font-size: 16px;
+    font-family: 'Roboto-Regular', sans-serif;
+    letter-spacing: 1px;
+    font-weight: 300;
+}
+
+/* Help Button Styles */
+.help-button {
+    position: fixed;
+    bottom: 13px;
+    right: 14px;
+    background-color: #000000 !important;
+    color: #ffffff !important;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 16px;
+    border-radius: 22px;
+    cursor: pointer;
+    width: 120px;
+    height: 40px;
+    justify-content: center;
+}
+
+.help-icon {
+    width: 24px;
+    height: 24px;
+    border: 2px solid #ffffff !important;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+}
+
+.help-button span {
+    letter-spacing: 1.2px;
+    font-weight: 300;
+}
+
+/* Footer Styles */
+.footer {
+    width: 100%;
+    height: 40px;
+    background-color: #242424 !important;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 50px;
+    margin-top: 40px;
+}
+
+.footer-text {
+    color: #ffffff !important;
+    font-size: 12px;
+    font-family: 'Roboto-Regular', sans-serif;
+    font-weight: 222;
+    letter-spacing: 0.5px;
+}
+
+.payment-methods {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-right: 100px;
+}
+
+.payment-methods i {
+    font-size: 24px;
+    color: #ffffff !important;
+}
+
+.payment-methods .fa-cc-visa {
+    color: #1A1F71;
+}
+
+.payment-methods .fa-cc-mastercard {
+    color: #EB001B;
+}
+
+.payment-methods .fa-cc-amex {
+    color: #006FCF;
+}
+
+.payment-methods .fa-cc-paypal {
+    color: #003087;
+}
+
+.payment-methods .fa-cc-apple-pay {
+    color: #000000;
+}
+
+/* Efectos y estados */
+.nav-links a:hover {
+    opacity: 0.8;
+}
+
+.join-btn:hover {
+    background-color: #f0f0f0 !important;
+}
+
+.help-button:hover {
+    background-color: rgba(255, 255, 255, 0.1) !important;
+}
+
+.social-icons i:hover {
+    opacity: 0.8;
+    cursor: pointer;
+}
+
+/* Banner Styles */
+.banner {
+    width: 100%;
+    overflow: hidden;
+}
+
+.banner img {
+    width: 100%;
+    height: 450px;
+    display: block;
+    object-fit: cover;
+    filter: brightness(0.88) contrast(1.1);
+}
+
+/* Estilos para el botón de modo oscuro */
+.dark-mode-toggle {
+    display: flex;
+    align-items: center;
+    margin-right: 10px;
+}
+
+#darkModeBtn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    transition: transform 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#darkModeBtn i {
+    font-size: 24px;
+    color: white;
+    -webkit-text-stroke: 2px white;
+}
+
+#darkModeBtn:hover {
+    transform: scale(1.1);
+}
+
+.social-media span {
+    margin-right: 10px;
+    letter-spacing: 1.5px;
+    font-weight: 300;
+}

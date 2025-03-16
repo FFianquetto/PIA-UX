@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Escape Salvaje</title>
+    <link rel="stylesheet" href="lightMode.css" id="theme-style">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+
+<body>
+    <div class="container">
+        <nav class="navbar">
+            <div class="logo-section">
+                <img src="zomboyImg/zomboyLogo_1.png" alt="Zomboy Logo" class="logo">
+            </div>
+
+            <div class="nav-links">
+                <a href="#" class="active">
+                    HOME
+                    <span class="brain-emoji">🧠</span>
+                    <div class="nav-indicator"></div>
+                </a>
+                <a href="#">
+                    APPAREL
+                    <span class="brain-emoji">🧠</span>
+                    <div class="nav-indicator"></div>
+                </a>
+                <a href="#">
+                    ACCESORIES
+                    <span class="brain-emoji">🧠</span>
+                    <div class="nav-indicator"></div>
+                </a>
+                <a href="#">
+                    SALE
+                    <span class="brain-emoji">🧠</span>
+                    <div class="nav-indicator"></div>
+                </a>
+                <a href="#">
+                    GIFTCARD
+                    <span class="brain-emoji">🧠</span>
+                    <div class="nav-indicator"></div>
+                </a>
+            </div>
+
+            <div class="nav-right">
+                <div class="country-selector">
+                    Mexico (USD $) <i class="fas fa-angle-down"></i>
+                </div>
+                <button class="join-btn">JOIN US!</button>
+                <div class="cart-icon">
+                    <i class="fas fa-shopping-cart"></i>
+                </div>
+            </div>
+        </nav>
+
+        <div class="search-bar">
+            <div class="kt8-logo">
+                <img src="zomboyImg/kt8Logo_1.png" alt="KT8 Logo">
+            </div>
+            <div class="search-container">
+                <input type="text" placeholder="Search for...">
+            </div>
+            <div class="social-media">
+                <div class="dark-mode-toggle">
+                    <button id="darkModeBtn" onclick="toggleDarkMode()">
+                        <i class="fas fa-moon"></i>
+                    </button>
+                </div>
+                <span>SOCIAL MEDIA</span>
+                <div class="social-icons">
+                    <i class="fab fa-facebook"></i>
+                    <i class="fab fa-twitter"></i>
+                    <i class="fab fa-instagram"></i>
+                </div>
+            </div>
+        </div>
+
+        <div class="banner">
+            <img src="zomboyImg/banner_1.png" alt="Banner">
+        </div>
+
+        <div class="info-section">
+            <h2>For more info:</h2>
+            <div class="info-links">
+                <a href="#">Costumer Support</a>
+                <a href="#">Site Terms and Conditions</a>
+                <a href="#">Expediate Order Replacemente</a>
+            </div>
+        </div>
+
+        <div class="help-button">
+            <div class="help-icon">?</div>
+            <span>Ayuda</span>
+        </div>
+
+    </div>
+
+    <footer class="footer">
+        <div class="footer-text">© 2025, KT8 Merch Co All rights reserved.</div>
+        <div class="payment-methods">
+            <i class="fab fa-cc-visa"></i>
+            <i class="fab fa-cc-mastercard"></i>
+            <i class="fab fa-cc-amex"></i>
+            <i class="fab fa-cc-paypal"></i>
+            <i class="fab fa-cc-apple-pay"></i>
+        </div>
+    </footer>
+
+    <script>
+        function toggleDarkMode() {
+            const themeLink = document.getElementById('theme-style');
+            const bannerImg = document.querySelector('.banner img');
+            const logoImg = document.querySelector('.logo-section img');
+            const isDarkMode = themeLink.href.includes('lightMode.css');
+            
+            // Cambiar el tema CSS
+            themeLink.href = isDarkMode ? 'darkMode.css' : 'lightMode.css';
+            
+            // Cambiar la imagen del banner
+            bannerImg.src = isDarkMode ? 'zomboyImg/banner_2.png' : 'zomboyImg/banner_1.png';
+            
+            // Cambiar el logo
+            logoImg.src = isDarkMode ? 'zomboyImg/zomboyLogo_2.png' : 'zomboyImg/zomboyLogo_1.png';
+            
+            // Guardar preferencia
+            localStorage.setItem('darkMode', isDarkMode);
+        }
+
+        // Verificar preferencia guardada
+        if (localStorage.getItem('darkMode') === 'true') {
+            const themeLink = document.getElementById('theme-style');
+            const bannerImg = document.querySelector('.banner img');
+            const logoImg = document.querySelector('.logo-section img');
+            themeLink.href = 'darkMode.css';
+            bannerImg.src = 'zomboyImg/banner_2.png';
+            logoImg.src = 'zomboyImg/zomboyLogo_2.png';
+        }
+    </script>
+</body>
+
+</html>
